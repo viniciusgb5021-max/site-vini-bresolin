@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vini Bresolin - Serviços Residenciais | Qualidade que Resolve</title>
+    <title>Vini Bresolin - Serviços Residenciais | Seu lar em boas mãos!</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Ícones FontAwesome -->
@@ -34,23 +34,33 @@
 </head>
 <body class="bg-dark-bg text-gray-100 font-sans antialiased selection:bg-gold selection:text-black">
 
-    <!-- CABEÇALHO / HERO -->
-    <header class="relative bg-zinc-950 border-b border-dark-border py-12 md:py-20 overflow-hidden">
+    <!-- CABEÇALHO / HERO COM IMAGEM DE FUNDO DA CASA -->
+    <header class="relative bg-zinc-950 border-b border-dark-border py-16 md:py-24 overflow-hidden">
+        <!-- Imagem da Casa de Fundo com camada escura (overlay) para leitura perfeita -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" 
+                 alt="Casa Moderna - Vini Bresolin" 
+                 class="w-full h-full object-cover opacity-25 filter brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-zinc-950/90 to-dark-bg"></div>
+        </div>
+
         <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+            
             <div class="inline-block bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full text-gold text-xs font-semibold tracking-wide uppercase mb-4">
                 Atendimento Profissional em Porto Alegre e Região
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gold mb-2 tracking-tight">
                 VINI BRESOLIN
             </h1>
-            <p class="text-xl md:text-2xl font-semibold text-gold mb-3 font-heading uppercase tracking-wider">
+            <p class="text-xl md:text-2xl font-bold text-white mb-3 font-heading uppercase tracking-wider">
                 SERVIÇOS RESIDENCIAIS
             </p>
             <p class="text-2xl md:text-3xl italic font-semibold text-gold mb-8 font-heading">
                 "Seu lar em boas mãos!"
             </p>
             
-            <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-base md:text-lg">
+            <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-base md:text-lg leading-relaxed">
                 Soluções práticas, vedações técnicas, pintura e pequenos reparos executados com agilidade, transparência e respeito pelo seu imóvel.
             </p>
             
@@ -59,7 +69,7 @@
                     <i class="fa-brands fa-whatsapp text-2xl"></i>
                     Solicitar Orçamento no WhatsApp
                 </a>
-                <a href="#condominios" class="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-xl border border-zinc-700 transition flex items-center justify-center gap-2">
+                <a href="#condominios" class="w-full sm:w-auto bg-zinc-800/90 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-xl border border-zinc-700 transition flex items-center justify-center gap-2 backdrop-blur-sm">
                     <i class="fa-solid fa-building text-gold"></i>
                     Planos para Condomínios
                 </a>
@@ -67,7 +77,7 @@
         </div>
     </header>
 
-    <!-- DIFERENCIAIS / BANNER -->
+    <!-- SELOS DE COMPROMISSO DO BANNER -->
     <section class="py-8 bg-zinc-900/50 border-b border-dark-border">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div class="p-3">
@@ -122,13 +132,13 @@
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20gostaria%20de%20or%C3%A7amento%20para%20pintura." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
 
-            <!-- Card 3: Reparos Hidráulicos (AJUSTADO) -->
+            <!-- Card 3: Reparos Hidráulicos (AJUSTADO PARA SEU FOCO) -->
             <div class="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/50 transition">
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-faucet-drip"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2">Reparos Hidráulicos</h3>
-                <p class="text-gray-400 text-sm mb-4">Troca de chuveiros, substituição de torre e mecanismo de caixa acoplada, instalação de torneiras, sifões e eliminação de pequenos vazamentos.</p>
+                <p class="text-gray-400 text-sm mb-4">Troca de chuveiros, substituição de torre e mecanismo de caixa acoplada, instalação de torneiras, sifões e reparos pontuais.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20preciso%20de%20reparo%20hidr%C3%A1ulico%20(chuveiro/caixa%20acoplada/torneira)." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
 
@@ -165,22 +175,22 @@
         </div>
     </section>
 
-    <!-- SEÇÃO PLANO CONDOMINIAL (REVISADO E AJUSTADO) -->
+    <!-- SEÇÃO PLANO CONDOMINIAL -->
     <section class="py-16 bg-zinc-950 border-t border-b border-zinc-800" id="condominios">
         <div class="max-w-6xl mx-auto px-4">
             
             <div class="text-center mb-12">
                 <span class="text-gold font-semibold tracking-wider uppercase text-sm">Exclusivo para Síndicos e Administradoras</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Plano de Manutenção <span class="text-gold">Condominial</span></h2>
-                <p class="text-zinc-400 max-w-2xl mx-auto">Garanta a conservação contínua do seu prédio com visitas periódicas programadas. Reduza chamados urgentes e proteja o patrimônio dos condôminos.</p>
+                <p class="text-zinc-400 max-w-2xl mx-auto">Garanta a conservação do seu condomínio com visitas programadas e suporte preventivo contínuo. Evite emergências e reduza custos extras.</p>
             </div>
 
             <div class="max-w-3xl mx-auto bg-zinc-900 border-2 border-gold/40 rounded-2xl p-6 md:p-8 relative shadow-xl hover:border-gold transition duration-300">
                 
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-800 pb-6 mb-6">
                     <div>
-                        <h3 class="text-2xl font-bold text-white">Atendimento Recorrente Preventivo</h3>
-                        <p class="text-gold font-medium">Visitas semanais ou quinzenais sob medida</p>
+                        <h3 class="text-2xl font-bold text-white">Contrato Mensal Preventivo</h3>
+                        <p class="text-gold font-medium">1 visita por semana (4 visitas no mês)</p>
                     </div>
                     <div class="bg-zinc-800/80 px-4 py-2 rounded-lg border border-zinc-700 text-center md:text-right">
                         <span class="text-xs text-zinc-400 block">Proposta sob medida</span>
@@ -191,19 +201,19 @@
                 <ul class="space-y-4 mb-8 text-zinc-300">
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-gold mt-1"></i>
-                        <span><strong>Check-list & Vistoria Preventiva:</strong> Inspeção de iluminação nas áreas comuns, portarias, garagens, salão de festas e halls.</span>
+                        <span><strong>Check-list & Vistoria Preventiva:</strong> Inspeção periódica nas áreas comuns, portarias, garagens e salão de festas.</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-gold mt-1"></i>
-                        <span><strong>Reparos Imediatos de Rotina:</strong> Troca de lâmpadas, reatores, pequenos ajustes hidráulicos, torneiras e vedações preventivas.</span>
+                        <span><strong>Reparos Imediatos:</strong> Troca de lâmpadas, reparos de iluminação, ajustes em torneiras, descargas e vedações rápidas.</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-gold mt-1"></i>
-                        <span><strong>Conservação & Regulagens:</strong> Lubrificação e regulagem de portões, fechaduras, mola de portas e pequenos reparos de alvenaria/pintura.</span>
+                        <span><strong>Ajustes & Conservação:</strong> Lubrificação e regulagem de portões, fechaduras, dobradiças e pequenas manutenções.</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-gold mt-1"></i>
-                        <span><strong>Nota Fiscal & Facilidade para Administradoras:</strong> Emissão de Nota Fiscal regular (MEI) ajustada para prestação de contas com administradoras (Guarida e portais).</span>
+                        <span><strong>Prestação de Contas Simplificada:</strong> Emissão de nota fiscal regular (Guarida e portais) e relatórios de execução.</span>
                     </li>
                 </ul>
 
