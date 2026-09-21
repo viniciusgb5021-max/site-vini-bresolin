@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vini Bresolin - Serviços Residenciais | Qualidade que Resolve</title>
+    <title>Vini Bresolin - Serviços Residenciais | Seu lar em boas mãos!</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Ícones FontAwesome -->
@@ -16,9 +16,10 @@
                 extend: {
                     colors: {
                         gold: '#D4AF37',
-                        'dark-bg': '#0F0F11',
-                        'dark-card': '#18181C',
-                        'dark-border': '#27272A'
+                        'gold-hover': '#F3E5AB',
+                        'dark-bg': '#0B0B0D',
+                        'dark-card': '#141417',
+                        'dark-border': '#26262B'
                     },
                     fontFamily: {
                         sans: ['Open Sans', 'sans-serif'],
@@ -30,36 +31,50 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #997A15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="bg-dark-bg text-gray-100 font-sans antialiased selection:bg-gold selection:text-black">
 
-    <!-- CABEÇALHO / HERO -->
-    <header class="relative bg-zinc-950 border-b border-dark-border py-12 md:py-20 overflow-hidden">
+    <!-- CABEÇALHO / HERO COM IMAGEM DE FUNDO DA CASA DA FACHADA -->
+    <header class="relative bg-zinc-950 border-b border-dark-border py-20 md:py-28 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" 
+                 alt="Fachada Residencial - Vini Bresolin" 
+                 class="w-full h-full object-cover opacity-30 filter brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-zinc-950/90 to-dark-bg"></div>
+        </div>
+
         <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
-            <div class="inline-block bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full text-gold text-xs font-semibold tracking-wide uppercase mb-4">
+            
+            <div class="inline-block bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full text-gold text-xs font-semibold tracking-wide uppercase mb-6 backdrop-blur-sm">
                 Atendimento Profissional em Porto Alegre e Região
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">
+
+            <h1 class="text-4xl md:text-7xl font-extrabold text-gold tracking-tight mb-2 font-heading">
                 VINI BRESOLIN
             </h1>
-            <p class="text-xl md:text-2xl font-semibold text-gold mb-3 font-heading uppercase tracking-wider">
+            <p class="text-xl md:text-2xl font-bold text-white mb-3 font-heading uppercase tracking-wider">
                 SERVIÇOS RESIDENCIAIS
             </p>
             <p class="text-2xl md:text-3xl italic font-semibold text-gold mb-8 font-heading">
                 "Seu lar em boas mãos!"
             </p>
             
-            <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-base md:text-lg">
+            <p class="text-gray-300 max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
                 Soluções práticas, vedações técnicas, pintura e pequenos reparos executados com agilidade, transparência e respeito pelo seu imóvel.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="w-full sm:w-auto bg-gold hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="w-full sm:w-auto bg-gold hover:bg-yellow-500 text-black font-extrabold py-4 px-8 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
                     <i class="fa-brands fa-whatsapp text-2xl"></i>
                     Solicitar Orçamento no WhatsApp
                 </a>
-                <a href="#condominios" class="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-xl border border-zinc-700 transition flex items-center justify-center gap-2">
+                <a href="#condominios" class="w-full sm:w-auto bg-zinc-800/90 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-xl border border-zinc-700 transition flex items-center justify-center gap-2 backdrop-blur-sm">
                     <i class="fa-solid fa-building text-gold"></i>
                     Planos para Condomínios
                 </a>
@@ -67,7 +82,7 @@
         </div>
     </header>
 
-    <!-- DIFERENCIAIS -->
+    <!-- SELOS DE GARANTIA DO BANNER -->
     <section class="py-8 bg-zinc-900/50 border-b border-dark-border">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div class="p-3">
@@ -96,7 +111,7 @@
     <!-- SERVIÇOS PRESTADOS -->
     <section class="py-16 max-w-6xl mx-auto px-4" id="servicos">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Como posso <span class="text-gold">te ajudar?</span></h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 font-heading">Como posso <span class="text-gold">te ajudar?</span></h2>
             <p class="text-gray-400 max-w-xl mx-auto">Confira abaixo as principais especialidades de atendimento residencial e predial.</p>
         </div>
 
@@ -107,7 +122,7 @@
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-droplet-slash"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Vedações & Infiltrações</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-heading">Vedações & Infiltrações</h3>
                 <p class="text-gray-400 text-sm mb-4">Aplicação técnica de PU e selantes em janelas, esquadrias, calhas, fissuras de fachada e áreas molhadas.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20preciso%20de%20ajuda%20com%20veda%C3%A7%C3%A3o/infiltra%C3%A7%C3%A3o." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
@@ -117,18 +132,18 @@
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-paint-roller"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Pintura & Acabamentos</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-heading">Pintura & Acabamentos</h3>
                 <p class="text-gray-400 text-sm mb-4">Pintura residencial e comercial, preparação de paredes, reparos em gesso, mofo e correções estruturais leves.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20gostaria%20de%20or%C3%A7amento%20para%20pintura." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
 
-            <!-- Card 3: Reparos Hidráulicos -->
+            <!-- Card 3: Reparos Hidráulicos (FOCO ESPECÍFICO) -->
             <div class="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/50 transition">
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-faucet-drip"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Reparos Hidráulicos</h3>
-                <p class="text-gray-400 text-sm mb-4">Troca de chuveiro, substituição de torre e mecanismo de caixa acoplada, instalação de torneiras, sifões e pequenos vazamentos.</p>
+                <h3 class="text-xl font-bold text-white mb-2 font-heading">Reparos Hidráulicos</h3>
+                <p class="text-gray-400 text-sm mb-4">Troca de chuveiro, substituição de mecanismo e torre de caixa acoplada, instalação de torneiras, sifões e pequenos vazamentos.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20preciso%20de%20reparo%20hidr%C3%A1ulico%20(chuveiro/caixa%20acoplada/torneira)." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
 
@@ -137,7 +152,7 @@
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-hammer"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Instalações & Montagens</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-heading">Instalações & Montagens</h3>
                 <p class="text-gray-400 text-sm mb-4">Instalação de prateleiras, suportes de TV, quadros, cortinas, fechos, fechaduras digitais e pequenos ajustes.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20preciso%20de%20instala%C3%A7%C3%A3o/montagem." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
@@ -147,7 +162,7 @@
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-plug-circle-bolt"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Pequenos Reparos Elétricos</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-heading">Pequenos Reparos Elétricos</h3>
                 <p class="text-gray-400 text-sm mb-4">Troca de tomadas, interruptores, luminárias, lustres e substituição de disjuntores ou fiação simples.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20preciso%20de%20servi%C3%A7o%20el%C3%A9trico." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
@@ -157,7 +172,7 @@
                 <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold text-xl mb-4">
                     <i class="fa-solid fa-clipboard-check"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Manutenção Preventiva</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-heading">Manutenção Preventiva</h3>
                 <p class="text-gray-400 text-sm mb-4">Revisões gerais para casas, apartamentos e salas comerciais, identificando e corrigindo falhas antes que piorem.</p>
                 <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20quero%20agendar%20uma%20manuten%C3%A7%C3%A3o%20preventiva." target="_blank" class="text-gold text-sm font-semibold hover:underline flex items-center gap-1">Consultar serviço <i class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
@@ -166,22 +181,20 @@
     </section>
 
     <!-- SEÇÃO PLANO CONDOMINIAL -->
-    <section class="py-16 bg-zinc-950 border-t border-zinc-800" id="condominios">
+    <section class="py-16 bg-zinc-950 border-t border-b border-zinc-800" id="condominios">
         <div class="max-w-6xl mx-auto px-4">
             
-            <!-- Cabeçalho da Seção -->
             <div class="text-center mb-12">
                 <span class="text-gold font-semibold tracking-wider uppercase text-sm">Exclusivo para Síndicos e Administradoras</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Plano de Manutenção <span class="text-gold">Condominial</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4 font-heading">Plano de Manutenção <span class="text-gold">Condominial</span></h2>
                 <p class="text-zinc-400 max-w-2xl mx-auto">Garanta a conservação do seu condomínio com visitas programadas e suporte preventivo contínuo. Evite emergências e reduza custos extras.</p>
             </div>
 
-            <!-- Card do Plano Mensal -->
             <div class="max-w-3xl mx-auto bg-zinc-900 border-2 border-gold/40 rounded-2xl p-6 md:p-8 relative shadow-xl hover:border-gold transition duration-300">
                 
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-800 pb-6 mb-6">
                     <div>
-                        <h3 class="text-2xl font-bold text-white">Contrato Mensal Preventivo</h3>
+                        <h3 class="text-2xl font-bold text-white font-heading">Contrato Mensal Preventivo</h3>
                         <p class="text-gold font-medium">1 visita por semana (4 visitas no mês)</p>
                     </div>
                     <div class="bg-zinc-800/80 px-4 py-2 rounded-lg border border-zinc-700 text-center md:text-right">
@@ -190,7 +203,6 @@
                     </div>
                 </div>
 
-                <!-- Lista de Benefícios -->
                 <ul class="space-y-4 mb-8 text-zinc-300">
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-gold mt-1"></i>
@@ -214,7 +226,6 @@
                     </li>
                 </ul>
 
-                <!-- Botão WhatsApp -->
                 <div class="text-center">
                     <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini!%20Gostaria%20de%20solicitar%20uma%20proposta%20do%20Plano%20de%20Manuten%C3%A7%C3%A3o%20Condominial%20para%20o%20meu%20condom%C3%ADnio." 
                        target="_blank" 
@@ -228,10 +239,62 @@
         </div>
     </section>
 
+    <!-- SIMULADOR DE ORÇAMENTO INTERATIVO -->
+    <section class="py-16 max-w-4xl mx-auto px-4" id="simulador">
+        <div class="bg-dark-card border border-gold/30 rounded-2xl p-6 md:p-10 shadow-2xl">
+            <div class="text-center mb-8">
+                <span class="text-gold font-semibold uppercase text-xs tracking-widest">Atendimento Rápido</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1 font-heading">Simulador de <span class="text-gold">Orçamento</span></h2>
+                <p class="text-gray-400 text-sm mt-1">Selecione os serviços desejados para enviar uma solicitação direta ao WhatsApp.</p>
+            </div>
+
+            <form id="calcForm" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-center gap-3 p-4 bg-zinc-900 border border-dark-border rounded-xl cursor-pointer hover:border-gold/50 transition">
+                        <input type="checkbox" name="servico" value="Vedações e Infiltrações" class="w-5 h-5 accent-gold">
+                        <span class="text-sm font-semibold text-gray-200">Vedações & Infiltrações</span>
+                    </label>
+
+                    <label class="flex items-center gap-3 p-4 bg-zinc-900 border border-dark-border rounded-xl cursor-pointer hover:border-gold/50 transition">
+                        <input type="checkbox" name="servico" value="Pintura e Acabamentos" class="w-5 h-5 accent-gold">
+                        <span class="text-sm font-semibold text-gray-200">Pintura & Acabamentos</span>
+                    </label>
+
+                    <label class="flex items-center gap-3 p-4 bg-zinc-900 border border-dark-border rounded-xl cursor-pointer hover:border-gold/50 transition">
+                        <input type="checkbox" name="servico" value="Troca de Chuveiro / Caixa Acoplada / Torneira" class="w-5 h-5 accent-gold">
+                        <span class="text-sm font-semibold text-gray-200">Reparos Hidráulicos (Chuveiro / Caixa / Torneira)</span>
+                    </label>
+
+                    <label class="flex items-center gap-3 p-4 bg-zinc-900 border border-dark-border rounded-xl cursor-pointer hover:border-gold/50 transition">
+                        <input type="checkbox" name="servico" value="Instalações e Montagens" class="w-5 h-5 accent-gold">
+                        <span class="text-sm font-semibold text-gray-200">Instalações & Montagens</span>
+                    </label>
+
+                    <label class="flex items-center gap-3 p-4 bg-zinc-900 border border-dark-border rounded-xl cursor-pointer hover:border-gold/50 transition">
+                        <input type="checkbox" name="servico" value="Pequenos Reparos Elétricos" class="w-5 h-5 accent-gold">
+                        <span class="text-sm font-semibold text-gray-200">Pequenos Reparos Elétricos</span>
+                    </label>
+
+                    <label class="flex items-center gap-3 p-4 bg-zinc-900 border border-dark-border rounded-xl cursor-pointer hover:border-gold/50 transition">
+                        <input type="checkbox" name="servico" value="Manutenção Preventiva" class="w-5 h-5 accent-gold">
+                        <span class="text-sm font-semibold text-gray-200">Manutenção Preventiva</span>
+                    </label>
+                </div>
+
+                <div class="pt-4">
+                    <button type="button" onclick="enviarSimulacao()" class="w-full bg-gold hover:bg-yellow-500 text-black font-extrabold py-4 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 uppercase tracking-wide text-sm font-heading">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        Enviar Lista Selecionada no WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- SOBRE / QUEM SOMOS -->
     <section class="py-16 bg-zinc-900/30">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Atendimento Transparente e Direto</h2>
+            <h2 class="text-3xl font-bold text-white mb-4 font-heading">Atendimento Transparente e Direto</h2>
             <p class="text-gray-300 text-base leading-relaxed mb-6">
                 Meu compromisso é resolver o seu problema com eficiência, sem complicações. Seja para troca de chuveiro e reparos na sua residência ou para a manutenção recorrente do seu condomínio, trago soluções definitivas com orçamento honesto e execução caprichada.
             </p>
@@ -241,30 +304,10 @@
         </div>
     </section>
 
-    <!-- DÚVIDAS FREQUENTES (FAQ) -->
-    <section class="py-16 max-w-4xl mx-auto px-4 border-t border-dark-border">
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Perguntas <span class="text-gold">Frequentes</span></h2>
-        
-        <div class="space-y-4">
-            <div class="bg-dark-card p-5 rounded-xl border border-dark-border">
-                <h4 class="font-bold text-gold mb-1"><i class="fa-solid fa-circle-question mr-2"></i>Como é feito o orçamento?</h4>
-                <p class="text-sm text-gray-300">Você pode enviar fotos e vídeos do serviço pelo WhatsApp. Na maioria dos casos é possível passar uma estimativa imediata sem custo.</p>
-            </div>
-            <div class="bg-dark-card p-5 rounded-xl border border-dark-border">
-                <h4 class="font-bold text-gold mb-1"><i class="fa-solid fa-circle-question mr-2"></i>Você emite Nota Fiscal?</h4>
-                <p class="text-sm text-gray-300">Sim, emito Nota Fiscal para todos os serviços, facilitando para condomínios, empresas e residências.</p>
-            </div>
-            <div class="bg-dark-card p-5 rounded-xl border border-dark-border">
-                <h4 class="font-bold text-gold mb-1"><i class="fa-solid fa-circle-question mr-2"></i>Atendem urgências?</h4>
-                <p class="text-sm text-gray-300">Sim, conforme disponibilidade na agenda para vazamentos, chuveiros queimados ou pequenos reparos urgentes.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- RODAPÉ -->
     <footer class="bg-black border-t border-dark-border py-10 text-center text-gray-500 text-sm">
         <div class="max-w-7xl mx-auto px-4 space-y-4">
-            <p class="text-white font-bold text-lg">VINI BRESOLIN - SERVIÇOS RESIDENCIAIS</p>
+            <p class="text-white font-bold text-lg font-heading">VINI BRESOLIN - SERVIÇOS RESIDENCIAIS</p>
             <p class="text-gold font-semibold">(51) 98506-8071 | Instagram: @vinibresolin</p>
             <p>&copy; 2026 Vini Bresolin - Todos os direitos reservados. Qualidade e Respeito com a sua Casa.</p>
         </div>
@@ -274,6 +317,22 @@
     <a href="https://wa.me/5551985068071?text=Ol%C3%A1%20Vini,%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
+
+    <!-- SCRIPT DO SIMULADOR -->
+    <script>
+        function enviarSimulacao() {
+            const checkboxes = document.querySelectorAll('input[name="servico"]:checked');
+            if (checkboxes.length === 0) {
+                alert('Por favor, selecione pelo menos um serviço!');
+                return;
+            }
+            let servicos = [];
+            checkboxes.forEach(cb => servicos.push(cb.value));
+            
+            const texto = `Ol%C3%A1%20Vini!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20os%20seguintes%20servi%C3%A7os:%0A-%20` + servicos.join('%0A-%20');
+            window.open(`https://wa.me/5551985068071?text=${texto}`, '_blank');
+        }
+    </script>
 
 </body>
 </html>
