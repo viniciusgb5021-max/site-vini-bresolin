@@ -1,318 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vini Bresolin - Serviços Residenciais | Qualidade que Resolve</title>
+    <title>Vini Bresolin - Pintura & Impermeabilização</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            light: '#f2d06b',
-                            DEFAULT: '#D4AF37',
-                            dark: '#aa820a',
-                        },
                         dark: {
-                            bg: '#0d0d0d',
-                            card: '#171717',
-                            border: '#2a2a2a'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Open Sans', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
+                            bg: '#121212',
+                            card: '#1e1e1e',
+                            border: '#2d2d2d'
+                        },
+                        gold: '#d4af37'
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { background-color: #0d0d0d; color: #f3f4f6; font-family: 'Open Sans', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-    </style>
 </head>
-<body class="bg-dark-bg text-gray-100 antialiased selection:bg-gold selection:text-black">
+<body class="bg-dark-bg text-gray-100 font-sans antialiased">
 
-    <!-- HEADER / NAVBAR -->
-    <header class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur border-b border-dark-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl font-bold shadow-lg shadow-gold/10">
-                    <i class="fa-solid fa-house-chimney"></i>
-                </div>
-                <div>
-                    <span class="block font-heading font-extrabold text-xl tracking-wider text-white">VINI BRESOLIN</span>
-                    <span class="block text-xs font-semibold tracking-widest text-gold uppercase">Serviços Residenciais & Industriais</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-                <a href="#servicos" class="text-gray-300 hover:text-gold transition">Serviços</a>
-                <a href="#portfolio" class="text-gray-300 hover:text-gold transition">Portfólio Real</a>
-                <a href="#condominios" class="text-gray-300 hover:text-gold transition">Condomínios</a>
-                <a href="#sobre" class="text-gray-300 hover:text-gold transition">Sobre</a>
-                <a href="#simulador" class="text-gray-300 hover:text-gold transition">Simulador</a>
+    <!-- Cabeçalho -->
+    <header class="border-b border-dark-border bg-dark-card/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wider text-white">VINI <span class="text-gold">BRESOLIN</span></h1>
+            <nav class="space-x-6 text-sm">
+                <a href="#portfolio" class="hover:text-gold transition">Portfólio & Vídeo</a>
+                <a href="#contacto" class="hover:text-gold transition">Contacto</a>
             </nav>
-            <div>
-                <a href="https://wa.me/5551985068071?text=Olá%20Vini,%20vi%20seu%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="bg-gold hover:bg-gold-light text-black font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-gold/20 transition flex items-center space-x-2 text-sm">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>Chamar no WhatsApp</span>
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-dark-bg via-dark-card to-dark-bg border-b border-dark-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center space-x-2 bg-gold/10 border border-gold/30 px-3.5 py-1.5 rounded-full text-gold text-xs font-semibold tracking-wide uppercase">
-                        <i class="fa-solid fa-star text-gold"></i>
-                        <span>Soluções integradas para sua casa e empresa</span>
+    <!-- Conteúdo Principal -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-16">
+
+        <!-- Seção de Apresentação / Topo -->
+        <section class="text-center space-y-4">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white">Pintura Profissional & Impermeabilização</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Serviços especializados com tecnologia Airless, garantindo acabamento perfeito, alta durabilidade e eficiência para o seu imóvel.</p>
+        </section>
+
+        <!-- Seção de Portfólio com Vídeo Fixo da Airless -->
+        <section id="portfolio" class="space-y-6">
+            <div class="border-b border-dark-border pb-4">
+                <h3 class="text-2xl font-bold text-white">Portfólio em Destaque</h3>
+                <p class="text-sm text-gray-400">Veja o equipamento Airless em funcionamento na prática.</p>
+            </div>
+
+            <!-- Grelha com o Vídeo Fixo -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Bloco do Vídeo Airless -->
+                <div class="rounded-xl overflow-hidden border border-dark-border bg-dark-card group shadow-lg">
+                    <div class="h-72 overflow-hidden relative bg-black">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="video-airless.mp4" type="video/mp4">
+                            O seu navegador não suporta a tag de vídeo.
+                        </video>
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
-                        Qualidade que <span class="text-gold">Resolve!</span>
-                    </h1>
-                    <p class="text-lg text-gray-300 max-w-2xl leading-relaxed">
-                        Especialista em pintura residencial e comercial, pintura mecanizada Airless, sinalização viária, vedações e manutenções completas com agilidade e acabamento impecável.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                        <a href="https://wa.me/5551985068071?text=Olá%20Vini,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20gratuito." target="_blank" class="bg-gold hover:bg-gold-light text-black font-bold px-8 py-4 rounded-xl text-center shadow-xl shadow-gold/20 transition flex items-center justify-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>ORÇAMENTO GRATUITO</span>
-                        </a>
-                        <a href="#portfolio" class="bg-dark-card hover:bg-dark-border text-white border border-dark-border font-semibold px-6 py-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-images text-gold"></i>
-                            <span>Ver Trabalhos Realizados</span>
-                        </a>
-                    </div>
-                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-dark-border text-center sm:text-left">
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-bolt text-gold"></i>
-                            <span class="text-xs text-gray-400">Atendimento Rápido</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-broom text-gold"></i>
-                            <span class="text-xs text-gray-400">Obra Limpa</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-shield-halved text-gold"></i>
-                            <span class="text-xs text-gray-400">Garantia no Serviço</span>
-                        </div>
+                    <div class="p-5">
+                        <span class="text-xs text-gold font-semibold uppercase tracking-wider">Tecnologia Avançada</span>
+                        <h4 class="text-white font-bold text-lg mt-1">Aplicação Mecanizada com Airless</h4>
+                        <p class="text-sm text-gray-400 mt-2">Pintura uniforme, rápida e de alto rendimento para grandes superfícies.</p>
                     </div>
                 </div>
 
-                <!-- HERO IMAGE (CASA MODERNA) -->
-                <div class="lg:col-span-5 relative">
-                    <div class="absolute -inset-1.5 bg-gradient-to-r from-gold to-yellow-600 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
-                    <div class="relative h-[400px] sm:h-[450px] rounded-2xl overflow-hidden border border-gold/30 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Casa Residencial Moderna" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                            <div class="flex items-center space-x-3 bg-black/60 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
-                                <div class="w-10 h-10 rounded-lg bg-gold/20 flex items-center justify-center text-gold">
-                                    <i class="fa-solid fa-phone text-lg"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs text-gray-400">Ligue ou Mande Msg</span>
-                                    <span class="block font-bold text-white text-sm sm:text-base">(51) 98506-8071</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="py-20 bg-dark-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Serviços Especializados</h2>
-                <p class="text-gray-400 text-base">Soluções completas com alto padrão técnico para residências, condomínios e indústrias em Porto Alegre e região.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-paint-roller"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-heading text-white mb-3">Pintura Residencial & Comercial</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Acabamento refinado em paredes, tetos, madeiramentos e estruturas metálicas. Preparação completa de superfícies e emassamento profissional.</p>
-                </div>
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-wind"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-heading text-white mb-3">Pintura Mecanizada Airless</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Alta performance e rendimento superior para grandes metragens, galpões, fachadas e superfícies texturizadas com uniformidade impecável.</p>
-                </div>
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-droplet"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-heading text-white mb-3">Impermeabilização & Vedações</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Proteção contra infiltrações com aplicação de membranas líquidas, selantes de poliuretano (PU 40/Dtools) e tratamento de fissuras estruturais.</p>
-                </div>
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-road"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-heading text-white mb-3">Sinalização Viária & Garagens</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Pintura de vagas de estacionamento, demarcações de tráfego, faixas de segurança e sinalização horizontal para condomínios e empresas.</p>
-                </div>
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-building-shield"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-heading text-white mb-3">Manutenção Predial & Fachadas</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Reparos em alvenaria, tratamento de fachadas, restauração de texturas, assentamento de blocos e reformas gerais.</p>
-                </div>
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-heading text-white mb-3">Instalações & Manutenção</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Instalação de fechaduras digitais, prateleiras de grande porte, suporte estrutural e serviços gerais de manutenção civil.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFÓLIO REAL -->
-    <section id="portfolio" class="py-20 bg-dark-card border-t border-dark-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Galeria de Trabalhos Reais</h2>
-                <p class="text-gray-400 text-base">Confira registros dos nossos serviços executados em obras residenciais e industriais.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-xl overflow-hidden border border-dark-border bg-dark-bg group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="IMG_20241228_182310_703.jpg" alt="Trabalho Vini Bresolin" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4">
-                        <span class="text-xs text-gold font-semibold uppercase tracking-wider">Execução Profissional</span>
-                        <h4 class="text-white font-bold text-base mt-1">Acabamento e Pintura Especializada</h4>
-                    </div>
-                </div>
-                <div class="rounded-xl overflow-hidden border border-dark-border bg-dark-bg group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="IMG_20231019_160705_683.jpg" alt="Trabalho Vini Bresolin" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4">
-                        <span class="text-xs text-gold font-semibold uppercase tracking-wider">Serviço Técnico</span>
-                        <h4 class="text-white font-bold text-base mt-1">Tratamento e Revestimento de Paredes</h4>
-                    </div>
-                </div>
-                <div class="rounded-xl overflow-hidden border border-dark-border bg-dark-bg group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="IMG_20231018_163000_734.jpg" alt="Trabalho Vini Bresolin" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4">
-                        <span class="text-xs text-gold font-semibold uppercase tracking-wider">Infraestrutura</span>
-                        <h4 class="text-white font-bold text-base mt-1">Manutenção e Reparos Gerais</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONDOMÍNIOS -->
-    <section id="condominios" class="py-20 bg-dark-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-dark-card to-dark-bg border border-gold/30 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="max-w-3xl space-y-6 relative z-10">
-                    <span class="text-gold font-bold text-xs uppercase tracking-widest bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/30">Parceria para Síndicos</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Atendimento Especializado para Condomínios</h2>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Soluções ágeis e organizadas para áreas comuns, garagens, sinalização viária, pintura de fachadas e manutenção preventiva periódica. Emitimos documentação e oferecemos facilidade na negociação para condomínios.
-                    </p>
-                    <div class="pt-4 flex flex-wrap gap-4">
-                        <a href="https://wa.me/5551985068071?text=Olá%20Vini,%20sou%20síndico%20e%20gostaria%20de%20um%20orçamento%20para%20o%20condomínio." target="_blank" class="bg-gold hover:bg-gold-light text-black font-bold px-8 py-4 rounded-xl shadow-lg shadow-gold/20 transition flex items-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>Falar sobre Condomínio</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="py-20 bg-dark-card border-t border-dark-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="text-gold font-bold text-xs uppercase tracking-widest bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/30">Profissionalismo e Confiança</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Compromisso com cada detalhe da sua obra</h2>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Com vasta experiência no mercado de reformas e manutenções em Porto Alegre, Vini Bresolin atua com foco total na excelência do acabamento, limpeza do ambiente de trabalho e cumprimento de prazos.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-4">
-                        <div class="border-l-2 border-gold pl-4">
-                            <h4 class="font-bold text-white text-lg">Pontualidade</h4>
-                            <p class="text-gray-400 text-sm">Respeito aos prazos combinados.</p>
-                        </div>
-                        <div class="border-l-2 border-gold pl-4">
-                            <h4 class="font-bold text-white text-lg">Garantia</h4>
-                            <p class="text-gray-400 text-sm">Serviço seguro e bem executado.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 bg-dark-bg p-8 rounded-2xl border border-dark-border space-y-6">
-                    <h3 class="text-2xl font-bold font-heading text-white">Entre em Contato Direto</h3>
-                    <p class="text-gray-400 text-sm">Atendimento rápido pelo WhatsApp para orçamentos e dúvidas técnicas.</p>
+                <!-- Bloco de Informações / Chamada para Ação ao lado -->
+                <div class="rounded-xl border border-dark-border bg-dark-card p-6 flex flex-col justify-between shadow-lg">
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-4 bg-dark-card p-4 rounded-xl border border-dark-border">
-                            <div class="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center text-gold text-xl">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs text-gray-400">Telefone / WhatsApp</span>
-                                <span class="block font-bold text-white text-base">(51) 98506-8071</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4 bg-dark-card p-4 rounded-xl border border-dark-border">
-                            <div class="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center text-gold text-xl">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs text-gray-400">Região de Atendimento</span>
-                                <span class="block font-bold text-white text-base">Porto Alegre e Região - RS</span>
-                            </div>
-                        </div>
+                        <span class="text-xs text-gold font-semibold uppercase tracking-wider">Qualidade Garantida</span>
+                        <h4 class="text-white font-bold text-xl">Porquê escolher o sistema Airless?</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2">✓ Acabamento impecável sem marcas de rolo</li>
+                            <li class="flex items-center gap-2">✓ Maior rendimento e economia de tinta</li>
+                            <li class="flex items-center gap-2">✓ Execução de obra muito mais rápida</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6">
+                        <a href="#contacto" class="block text-center bg-gold text-black font-bold py-3 px-4 rounded-lg hover:bg-yellow-600 transition">Solicitar Orçamento</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SIMULADOR -->
-    <section id="simulador" class="py-20 bg-dark-bg border-t border-dark-border">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Precisa de um Orçamento Rápido?</h2>
-            <p class="text-gray-400 text-base max-w-2xl mx-auto">Clique no botão abaixo para conversar diretamente com o Vini no WhatsApp e descrever o seu projeto ou necessidade de manutenção.</p>
-            <div class="pt-4">
-                <a href="https://wa.me/5551985068071?text=Olá%20Vini,%20gostaria%20de%20simular%20um%20orçamento%20para%20meu%20projeto." target="_blank" class="bg-gold hover:bg-gold-light text-black font-bold px-10 py-5 rounded-xl shadow-xl shadow-gold/20 transition inline-flex items-center space-x-3 text-lg">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    <span>Solicitar Orçamento no WhatsApp</span>
-                </a>
+        <!-- Seção de Contacto -->
+        <section id="contacto" class="bg-dark-card border border-dark-border rounded-2xl p-8 text-center space-y-4">
+            <h3 class="text-2xl font-bold text-white">Precisa de renovar o seu espaço?</h3>
+            <p class="text-gray-400 max-w-xl mx-auto">Entre em contacto para avaliarmos o seu projeto de pintura ou impermeabilização.</p>
+            <div class="pt-2">
+                <span class="inline-block bg-dark-bg border border-dark-border text-gold font-semibold px-6 py-3 rounded-xl">
+                    Porto Alegre - RS
+                </span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark-card border-t border-dark-border py-8 text-center text-gray-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Vini Bresolin - Todos os direitos reservados.</p>
-            <p class="text-gold font-semibold">Qualidade que Resolve!</p>
-        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="border-t border-dark-border mt-20 py-6 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Vini Bresolin. Todos os direitos reservados.</p>
     </footer>
 
 </body>
