@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,6 +54,7 @@
                 <a href="#servicos" class="text-gray-300 hover:text-gold transition">Serviços</a>
                 <a href="#hidraulica" class="text-gray-300 hover:text-gold transition">Hidráulica</a>
                 <a href="#condominios" class="text-gray-300 hover:text-gold transition">Condomínios</a>
+                <a href="#orcamento" class="text-gray-300 hover:text-gold transition">Orçamento Online</a>
                 <a href="#sobre" class="text-gray-300 hover:text-gold transition">Sobre</a>
             </nav>
             <div>
@@ -81,9 +82,9 @@
                         Especialista em pintura residencial e comercial, pintura mecanizada Airless, hidráulica, vedações e manutenções completas com agilidade e acabamento impecável.
                     </p>
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                        <a href="https://wa.me/5551985068071?text=Olá%20Vini,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20gratuito." target="_blank" class="bg-gold hover:bg-gold-light text-black font-bold px-8 py-4 rounded-xl text-center shadow-xl shadow-gold/20 transition flex items-center justify-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>ORÇAMENTO GRATUITO</span>
+                        <a href="#orcamento" class="bg-gold hover:bg-gold-light text-black font-bold px-8 py-4 rounded-xl text-center shadow-xl shadow-gold/20 transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-calculator text-xl"></i>
+                            <span>MONTAR ORÇAMENTO RÁPIDO</span>
                         </a>
                         <a href="#servicos" class="bg-dark-card hover:bg-dark-border text-white border border-dark-border font-semibold px-6 py-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
                             <i class="fa-solid fa-arrow-down text-gold"></i>
@@ -227,12 +228,62 @@
                             <p class="text-gray-400 text-sm leading-relaxed">Condições facilitadas para aprovação em assembleia, emissão de nota fiscal, relatórios fotográficos e garantia formal em contrato.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="pt-4 flex flex-wrap gap-4">
-                        <a href="https://wa.me/5551985068071?text=Olá%20Vini,%20sou%20síndico%20e%20gostaria%20de%20um%20orçamento%20detalhado%20para%20o%20condomínio." target="_blank" class="bg-gold hover:bg-gold-light text-black font-bold px-8 py-4 rounded-xl shadow-lg shadow-gold/20 transition flex items-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>Solicitar Proposta para Condomínio</span>
-                        </a>
+    <!-- SIMULADOR / ORÇAMENTO INTERATIVO -->
+    <section id="orcamento" class="py-20 bg-dark-bg border-t border-dark-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-dark-card border border-gold/40 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="text-center space-y-3 mb-10">
+                    <span class="text-gold font-bold text-xs uppercase tracking-widest bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/30">Atendimento Personalizado</span>
+                    <h2 class="text-3xl font-extrabold font-heading text-white">Monte seu Orçamento Rápido</h2>
+                    <p class="text-gray-400 text-sm">Preencha os dados abaixo. Ao clicar em enviar, os detalhes irão direto para o seu WhatsApp de forma organizada!</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">1. Qual o serviço principal você precisa?</label>
+                        <select id="select-servico" class="w-full bg-dark-bg border border-dark-border rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+                            <option value="Pintura Residencial / Comercial">Pintura Residencial / Comercial</option>
+                            <option value="Pintura Mecanizada Airless">Pintura Mecanizada Airless</option>
+                            <option value="Impermeabilização e Vedações (PU 40)">Impermeabilização e Vedações (PU 40)</option>
+                            <option value="Hidráulica (Instalação de caixa acoplada, reparos, sanitários)">Hidráulica (Instalação de caixa acoplada, reparos, sanitários)</option>
+                            <option value="Sinalização Viária e Garagens">Sinalização Viária e Garagens</option>
+                            <option value="Manutenção Predial / Condomínios">Manutenção Predial / Condomínios</option>
+                            <option value="Outro Serviço / Geral">Outro Serviço / Geral</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">2. Local ou Bairro / Cidade</label>
+                            <input type="text" id="input-local" placeholder="Ex: Bairro Moinhos de Vento, Porto Alegre" class="w-full bg-dark-bg border border-dark-border rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-gold focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">3. Prazo / Urgência desejada</label>
+                            <select id="select-urgencia" class="w-full bg-dark-bg border border-dark-border rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+                                <option value="Para agora / Urgente (Esta semana)">Para agora / Urgente (Esta semana)</option>
+                                <option value="Para breve (Próximos 15 a 30 dias)">Para breve (Próximos 15 a 30 dias)</option>
+                                <option value="Apenas planejamento / Orçamento futuro">Apenas planejamento / Orçamento futuro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">4. Detalhes adicionais (Opcional)</label>
+                        <textarea id="input-detalhes" rows="3" placeholder="Descreva brevemente o tamanho do local ou o problema a ser resolvido..." class="w-full bg-dark-bg border border-dark-border rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-gold focus:outline-none transition"></textarea>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="enviarWhatsApp()" class="w-full bg-gold hover:bg-gold-light text-black font-bold py-4 rounded-xl shadow-xl shadow-gold/20 transition flex items-center justify-center space-x-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>ENVIAR ORÇAMENTO VIA WHATSAPP</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -240,7 +291,7 @@
     </section>
 
     <!-- SOBRE -->
-    <section id="sobre" class="py-20 bg-dark-bg">
+    <section id="sobre" class="py-20 bg-dark-card border-t border-dark-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-6">
@@ -260,11 +311,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-6 bg-dark-card p-8 rounded-2xl border border-dark-border space-y-6">
-                    <h3 class="text-2xl font-bold font-heading text-white">Entre em Contato Direto</h3>
-                    <p class="text-gray-400 text-sm">Atendimento rápido pelo WhatsApp para orçamentos e dúvidas técnicas.</p>
+                <div class="lg:col-span-6 bg-dark-bg p-8 rounded-2xl border border-dark-border space-y-6">
+                    <h3 class="text-2xl font-bold font-heading text-white">Contato Direto</h3>
+                    <p class="text-gray-400 text-sm">Atendimento ágil pelo WhatsApp para dúvidas ou chamados rápidos.</p>
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-4 bg-dark-bg p-4 rounded-xl border border-dark-border">
+                        <div class="flex items-center space-x-4 bg-dark-card p-4 rounded-xl border border-dark-border">
                             <div class="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center text-gold text-xl">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
@@ -273,7 +324,7 @@
                                 <span class="block font-bold text-white text-base">(51) 98506-8071</span>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-4 bg-dark-bg p-4 rounded-xl border border-dark-border">
+                        <div class="flex items-center space-x-4 bg-dark-card p-4 rounded-xl border border-dark-border">
                             <div class="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center text-gold text-xl">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
@@ -295,6 +346,29 @@
             <p class="text-gold font-semibold">Qualidade que Resolve!</p>
         </div>
     </footer>
+
+    <!-- SCRIPT DO WHATSAPP FILTRADO -->
+    <script>
+        function enviarWhatsApp() {
+            const servico = document.getElementById('select-servico').value;
+            const local = document.getElementById('input-local').value.trim();
+            const urgencia = document.getElementById('select-urgencia').value;
+            const detalhes = document.getElementById('input-detalhes').value.trim();
+
+            let mensagem = `*Olá Vini! Vim pelo site e gostaria de um orçamento:*%0A%0A`;
+            mensagem += `🛠️ *Serviço:* ${encodeURIComponent(servico)}%0A`;
+            mensagem += `📍 *Local/Bairro:* ${encodeURIComponent(local || 'Não informado')}%0A`;
+            mensagem += `⏱️ *Prazo:* ${encodeURIComponent(urgencia)}%0A`;
+            if (detalhes) {
+                mensagem += `📝 *Detalhes:* ${encodeURIComponent(detalhes)}%0A`;
+            }
+
+            const numeroWhatsApp = "5551985068071";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+            
+            window.open(url, '_blank');
+        }
+    </script>
 
 </body>
 </html>
